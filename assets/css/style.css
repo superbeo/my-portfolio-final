@@ -1129,7 +1129,6 @@ form .button-area {
 }
 .footer .box-container .box .share {
   display: flex;
-  flex-wrap: wrap;
   padding: 1rem 0;
 }
 .footer .box-container .box .share a {

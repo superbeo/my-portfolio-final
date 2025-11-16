@@ -59,7 +59,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Jigar Sable";
+            document.title = "Portfolio | Cam Ly";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
@@ -71,7 +71,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
+    strings: ["", "", "quality control", "business analyst", "test automation"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -107,7 +107,7 @@ function showSkills(skills) {
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
-    projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
+    projects.slice(0, 1).forEach(project => {
         projectHTML += `
         <div class="box tilt">
       <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
@@ -118,8 +118,7 @@ function showProjects(projects) {
         <div class="desc">
           <p>${project.desc}</p>
           <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          
           </div>
         </div>
       </div>
@@ -172,23 +171,23 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 // pre loader end
 
 // disable developer mode
-document.onkeydown = function (e) {
-    if (e.keyCode == 123) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
-}
+// document.onkeydown = function (e) {
+//     if (e.keyCode == 123) {
+//         return false;
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+//         return false;
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+//         return false;
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+//         return false;
+//     }
+//     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+//         return false;
+//     }
+// }
 
 // Start of Tawk.to Live Chat
 var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
@@ -219,10 +218,9 @@ srtop.reveal('.home .content .btn', { delay: 200 });
 srtop.reveal('.home .image', { delay: 400 });
 srtop.reveal('.home .linkedin', { interval: 600 });
 srtop.reveal('.home .github', { interval: 800 });
-srtop.reveal('.home .twitter', { interval: 1000 });
-srtop.reveal('.home .telegram', { interval: 600 });
+
 srtop.reveal('.home .instagram', { interval: 600 });
-srtop.reveal('.home .dev', { interval: 600 });
+srtop.reveal('.home .facebook', { interval: 600 });
 
 /* SCROLL ABOUT */
 srtop.reveal('.about .content h3', { delay: 200 });
